@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 from datetime import datetime, timezone
 import shutil
