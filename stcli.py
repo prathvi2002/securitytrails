@@ -182,7 +182,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--subdomains",
         action="store_true",
-        help="Get Subdomains. Example: --subdomains"
+        help="Get Subdomains for provided domain. Example: --subdomains"
     )
     parser.add_argument(
         "--dns-history",
@@ -194,7 +194,7 @@ if __name__ == "__main__":
         "--ips-dns-history",
         type=str,
         default=False,
-        help="Get only IPs from DNS history for the domain using the specified record type. Example: --dns-history OR --dns-history AAAA. Supported types: A, AAAA, MX, NS, SOA, TXT. Also check --plain-ips option."
+        help="Get only IPs from DNS history for the domain using the specified record type. Example: --ips-dns-history OR --ips-dns-history AAAA. Supported types: A, AAAA, MX, NS, SOA, TXT. Also check --plain-ips option."
     )
     parser.add_argument(
         "--plain-ips",
@@ -204,14 +204,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--whois-history",
         action="store_true",
-        help="Get WHOIS History."
+        help="Get WHOIS History for provided domain."
     )
     parser.add_argument(
         "--apikey",
         type=str,
         default=False,
         nargs="+",
-        help="Security trails API key to use, accepts one ore multiple api keys separated by space. Example: --apikey YOU_API_KEY. If not provided using this option, the script will attempt to read it from the SECURITYTRAILS_API environment variable, in env variable multiple keys should be separated using colon :."
+        help="Security trails API key to use, accepts one ore multiple api keys separated by space. Example: --apikey API_KEY1 API_KEY2. If not provided using this option, the script will attempt to read it from the SECURITYTRAILS_API environment variable, in env variable multiple keys should be separated using colon :."
     )
 
     # Parse the arguments
